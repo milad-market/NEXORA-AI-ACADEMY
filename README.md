@@ -39,3 +39,7 @@ Secrets are server-side only.
 The Python Playground intentionally does not execute arbitrary Python on the server. A production sandbox should use an isolated WASM runtime or dedicated sandbox service. AI features show unavailable state when no real provider credential is configured.
 
 UI/UX Pro Max was not available as an installed skill in this environment, so the Liquid Glass design system was implemented manually and this limitation is documented here.
+
+
+## Vercel root
+The deployable source is at repository root with `pages/index.tsx`. Do not upload the ZIP as a file inside GitHub. Extract its contents and commit them at the repository root. In Vercel, set Root Directory to `./`.
