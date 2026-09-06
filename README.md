@@ -1,45 +1,30 @@
 # NEXORA AI ACADEMY
 
-Premium Persian-first interactive AI education platform built with Next.js.
+Premium Persian-first interactive AI education platform built for Vercel.
 
-## Features
-- Persian/English UI with RTL/LTR
-- Adaptive curriculum, searchable lessons, local progress persistence
-- AI Teacher with OpenAI, Gemini, and Anthropic adapters via server-side API
-- Multi-AI comparison endpoint when multiple credentials are configured
-- Prompt Lab
-- Interactive AI Lab visualizations
-- Quiz engine with real local scoring
-- AI glossary
-- Project Workshop
-- Premium Liquid Glass UI + Theme Studio presets
-- PWA manifest + service worker
-- Reduced-motion support and responsive layouts
+## Stack
+- Next.js 16 App Router
+- React 19
+- TypeScript
+- lucide-react
+- CSS Liquid Glass design system
 
-## Environment
-Copy `.env.example` to `.env.local` and set only the providers you actually have credentials for.
+## Run
+```bash
+npm ci
+npm run typecheck
+npm test
+npm run build
+npm run start
+```
 
-- `OPENAI_API_KEY`
-- `OPENAI_MODEL`
-- `ANTHROPIC_API_KEY`
-- `ANTHROPIC_MODEL`
-- `GOOGLE_GENERATIVE_AI_API_KEY`
-- `GEMINI_MODEL`
+## Design
+The project uses a custom Premium Liquid Glass + Neural Orbit visual system with motion, accessibility, responsive behavior, RTL/LTR localization, and theme persistence.
 
-Secrets are server-side only.
+The UI/UX Pro Max skill is not installed in this environment; its availability was checked and not claimed. The design was implemented manually using comparable design-system principles.
 
-## Commands
-`npm install`
-`npm run typecheck`
-`npm test`
-`npm run build`
-`npm start`
+## Vercel
+The project root intentionally contains `app/`, `package.json`, and `next.config.mjs` directly. Import the repository root into Vercel with no root-directory override.
 
-## Honest limitations
-The Python Playground intentionally does not execute arbitrary Python on the server. A production sandbox should use an isolated WASM runtime or dedicated sandbox service. AI features show unavailable state when no real provider credential is configured.
-
-UI/UX Pro Max was not available as an installed skill in this environment, so the Liquid Glass design system was implemented manually and this limitation is documented here.
-
-
-## Vercel root
-The deployable source is at repository root with `pages/index.tsx`. Do not upload the ZIP as a file inside GitHub. Extract its contents and commit them at the repository root. In Vercel, set Root Directory to `./`.
+## AI providers
+Keys are server-side only. Live AI responses should only be enabled when a supported provider and valid credentials are configured.
